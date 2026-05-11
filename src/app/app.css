@@ -80,25 +80,25 @@
         justify-items: center;
         position: static;
         scrollbar-width: none;
-    }
 
-    #main-container{
-        width: 300px;
-        background-color: rgba(0, 0, 0, 0.001);
+        #main-container{
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.001);
 
-        #preview{
-            font-size: 15px;
-        }
+            #preview{
+                font-size: 15px;
+            }
 
-        #input{
-            font-size: 50px;
-        }
+            #input{
+                font-size: 50px;
+            }
 
-        #button-container{    
-            button{
-                width: 67px;
-                height: 67px;
-                font-size: 30px;
+            #button-container{    
+                button{
+                    width: 67px;
+                    height: 67px;
+                    font-size: 30px;
+                }
             }
         }
     }
