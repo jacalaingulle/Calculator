@@ -6,7 +6,6 @@
     height: 100vh;
     justify-items: center;
     align-content: center;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
 
@@ -15,6 +14,7 @@
         background-color: rgba(0, 0, 0, 0.8);
         border-radius: 10px;
         padding: 30px;
+        color: white;
 
         #screen{
             height: 80px;
@@ -70,4 +70,36 @@
             }
         }
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+  #backdrop{
+    background-color: rgba(0, 0, 0, 0.8);
+    align-content: start;
+    justify-items: center;
+    position: static;
+    scrollbar-width: none;
+
+    #main-container{
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.001);
+
+        #preview{
+            font-size: 15px;
+        }
+
+        #input{
+            font-size: 50px;
+        }
+
+        #button-container{    
+            button{
+                width: 67px;
+                height: 67px;
+                font-size: 30px;
+            }
+        }
+    }
+  }
 }
