@@ -70,7 +70,9 @@ export class App {
     }
 
     if(this.service.input() === '0'){
-      this.clearAll();
+      setTimeout(() => {
+        this.clearAll();
+      }, 1000);
     }
 
     this.service.percent.set(false);
