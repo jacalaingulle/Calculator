@@ -1,0 +1,73 @@
+#backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-items: center;
+    align-content: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+
+    #main-container{
+        width: 25vw;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        padding: 30px;
+
+        #screen{
+            height: 80px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            text-align: end;
+            padding: 20px;
+            align-content: end;
+            margin-bottom: 20px;
+
+            #preview{
+                font-size: 20px;
+            }
+
+            #input{
+                width: 100%;
+                font-size: 60px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .no-preview{
+                color: transparent;
+            }
+        }
+
+        #button-container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-evenly;
+
+            button{
+                width: 88px;
+                height: 88px;
+                border-radius: 20px;
+                border: none;
+                font-size: 40px;
+                font-weight: 100;
+                background: linear-gradient(50deg, #3b3b3b, #606060);
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                cursor: pointer;
+            }
+
+            button:hover{
+                opacity: 80%;
+            }
+
+            .operator{
+                background: linear-gradient(120deg, #ff8800, #ffa228);
+            }
+        }
+    }
+}
