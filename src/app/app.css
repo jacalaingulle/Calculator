@@ -74,12 +74,13 @@
 
 @media only screen and (max-width: 600px) {
 
-  #backdrop{
-    background-color: rgba(0, 0, 0, 0.8);
-    align-content: start;
-    justify-items: center;
-    position: static;
-    scrollbar-width: none;
+    #backdrop{
+        background-color: rgba(0, 0, 0, 0.8);
+        align-content: start;
+        justify-items: center;
+        position: static;
+        scrollbar-width: none;
+    }
 
     #main-container{
         width: 300px;
@@ -101,5 +102,4 @@
             }
         }
     }
-  }
 }
