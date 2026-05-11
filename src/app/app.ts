@@ -69,6 +69,10 @@ export class App {
       }, 1000);
     }
 
+    if(this.service.input() === '0'){
+      this.clearAll();
+    }
+
     this.service.percent.set(false);
     this.service.enableEquals.set(false);
   }
