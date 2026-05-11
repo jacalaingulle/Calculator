@@ -22,13 +22,15 @@ export class App {
   }
 
   operatorClicked(operator : string){
-    if(this.service.prevInput() && this.service.input() === '0'){
+    if(this.service.prevInput() !== '0' && this.service.input() === '0'){
       this.service.preview.set(this.service.prevInput() + ' ' + operator);
+      this.service.input.set('0');
+      this.service.operator.set(operator);
     }else{
       this.service.prevInput.set(this.service.input());
       this.service.input.set('0');
       this.service.operator.set(operator);
-      this.service.preview.set(this.service.prevInput().toString() + ' ' + operator);
+      this.service.preview.set(this.service.prevInput() + ' ' + operator);
     }
     this.service.enableEquals.set(true);
   }
@@ -42,13 +44,10 @@ export class App {
       case '+':
         this.service.preview.set(this.service.preview() + ' ' + this.service.input());
         this.service.input.set(this.formatNumber((parseFloat(this.service.prevInput()) + parseFloat(this.service.input())).toFixed(5).toString()))
-        console.log(this.service.prevInput());
-        console.log(this.service.input());
         break;
       case '−':
         this.service.preview.set(this.service.preview() + ' ' + this.service.input().toString());
         this.service.input.set(this.formatNumber((parseFloat(this.service.prevInput()) - parseFloat(this.service.input())).toFixed(5).toString()))
-        console.log('Subtract')
         break;
       case '×':
         this.service.preview.set(this.service.preview() + ' ' + this.service.input().toString());
@@ -63,7 +62,7 @@ export class App {
     if(this.service.input() === 'Infinity'){
       this.service.preview.set('n');
       this.service.input.set('UNDEFINED');
-      document.getElementById('input')!.style.fontSize = '50px';
+      document.getElementById('input')!.style.fontSize = '30px';
       setTimeout(() => {
         document.getElementById('input')!.style.fontSize = '60px';
         this.clearAll();

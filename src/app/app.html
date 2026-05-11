@@ -8,19 +8,19 @@
       <button style="background: linear-gradient(120deg, #6c6c6c, #a0a0a0);" (click)="clearAll()">C</button>
       <button style="background: linear-gradient(120deg, #6c6c6c, #a0a0a0);" (click)="numberClicked('%'); service.percent.set(true);">%</button>
       <button style="background: linear-gradient(120deg, #6c6c6c, #a0a0a0);" (click)="backspace()">⌫</button>
-      <button class="operator" (click)="operatorClicked('÷')" [disabled]="service.input() === '0'">÷</button>
+      <button class="operator" (click)="operatorClicked('÷')">÷</button>
       <button (click)="numberClicked('7')">7</button>
       <button (click)="numberClicked('8')">8</button>
       <button (click)="numberClicked('9')">9</button>
-      <button class="operator" (click)="operatorClicked('×')" [disabled]="service.input() === '0'">×</button>
+      <button class="operator" (click)="operatorClicked('×')">×</button>
       <button (click)="numberClicked('4')">4</button>
       <button (click)="numberClicked('5')">5</button>
       <button (click)="numberClicked('6')">6</button>
-      <button class="operator" (click)="operatorClicked('−')" [disabled]="service.input() === '0'">−</button>
+      <button class="operator" (click)="operatorClicked('−')">−</button>
       <button (click)="numberClicked('1')">1</button>
       <button (click)="numberClicked('2')">2</button>
       <button (click)="numberClicked('3')">3</button>
-      <button class="operator" (click)="operatorClicked('+')" [disabled]="service.input() === '0'">+</button>
+      <button class="operator" (click)="operatorClicked('+')">+</button>
       <button (click)="toggleType()">+/-</button>
       <button (click)="numberClicked('0')">0</button>
       <button (click)="numberClicked('.')">.</button>
